@@ -106,7 +106,7 @@ namespace Content.Shared.CCVar
         ///     Controls if the game should run station events
         /// </summary>
         public static readonly CVarDef<bool>
-            EventsEnabled = CVarDef.Create("events.enabled", true, CVar.ARCHIVE | CVar.SERVERONLY);
+            EventsEnabled = CVarDef.Create("events.enabled", false, CVar.ARCHIVE | CVar.SERVERONLY);
 
         /// <summary>
         ///     Average time (in minutes) for when the ramping event scheduler should stop increasing the chaos modifier.
@@ -243,7 +243,7 @@ namespace Content.Shared.CCVar
         /// Is map rotation enabled?
         /// </summary>
         public static readonly CVarDef<bool>
-            GameMapRotation = CVarDef.Create("game.map_rotation", true, CVar.SERVERONLY);
+            GameMapRotation = CVarDef.Create("game.map_rotation", false, CVar.SERVERONLY);
 
         /// <summary>
         /// If roles should be restricted based on time.
@@ -380,27 +380,27 @@ namespace Content.Shared.CCVar
         ///     How many points to give to each player for loadouts.
         /// </summary>
         public static readonly CVarDef<int> GameLoadoutsPoints =
-            CVarDef.Create("game.loadouts_points", 14, CVar.REPLICATED);
+            CVarDef.Create("game.loadouts_points", 15, CVar.REPLICATED);
 
 
         /// <summary>
         ///     Whether to repeat eating doafters after completion
         /// </summary>
         public static readonly CVarDef<bool> GameAutoEatFood =
-            CVarDef.Create("game.auto_eat_food", false, CVar.REPLICATED);
+            CVarDef.Create("game.auto_eat_food", true, CVar.REPLICATED);
 
         /// <summary>
         ///     Whether to repeat drinking doafters after completion
         /// </summary>
         public static readonly CVarDef<bool> GameAutoEatDrinks =
-            CVarDef.Create("game.auto_eat_drinks", false, CVar.REPLICATED);
+            CVarDef.Create("game.auto_eat_drinks", true, CVar.REPLICATED);
 
 
         /// <summary>
         ///     When true, you have to press the change speed button to sprint.
         /// </summary>
         public static readonly CVarDef<bool> GamePressToSprint =
-            CVarDef.Create("game.press_to_sprint", true, CVar.REPLICATED);
+            CVarDef.Create("game.press_to_sprint", false, CVar.REPLICATED);
 
 #if EXCEPTION_TOLERANCE
         /// <summary>
@@ -415,7 +415,7 @@ namespace Content.Shared.CCVar
         /// Delay between station alert level changes.
         /// </summary>
         public static readonly CVarDef<int> GameAlertLevelChangeDelay =
-            CVarDef.Create("game.alert_level_change_delay", 30, CVar.SERVERONLY);
+            CVarDef.Create("game.alert_level_change_delay", 10, CVar.SERVERONLY);
 
         /// <summary>
         /// The time in seconds that the server should wait before restarting the round.
@@ -606,14 +606,14 @@ namespace Content.Shared.CCVar
          */
 
         public static readonly CVarDef<int> ZombieMinPlayers =
-            CVarDef.Create("zombie.min_players", 20);
+            CVarDef.Create("zombie.min_players", 1000);
 
         /*
          * Pirates
          */
 
         public static readonly CVarDef<int> PiratesMinPlayers =
-            CVarDef.Create("pirates.min_players", 25);
+            CVarDef.Create("pirates.min_players", 1000);
 
         public static readonly CVarDef<int> PiratesMaxOps =
             CVarDef.Create("pirates.max_pirates", 6);
@@ -636,7 +636,7 @@ namespace Content.Shared.CCVar
         ///     Whether tips being shown is enabled at all.
         /// </summary>
         public static readonly CVarDef<bool> TipsEnabled =
-            CVarDef.Create("tips.enabled", true);
+            CVarDef.Create("tips.enabled", false);
 
         /// <summary>
         ///     The dataset prototype to use when selecting a random tip.
@@ -1594,13 +1594,13 @@ namespace Content.Shared.CCVar
         /// Are players allowed to return on the arrivals shuttle.
         /// </summary>
         public static readonly CVarDef<bool> ArrivalsReturns =
-            CVarDef.Create("shuttle.arrivals_returns", false, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.arrivals_returns", true, CVar.SERVERONLY);
 
         /// <summary>
         /// Whether to automatically spawn escape shuttles.
         /// </summary>
         public static readonly CVarDef<bool> GridFill =
-            CVarDef.Create("shuttle.grid_fill", true, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.grid_fill", false, CVar.SERVERONLY);
 
         /*
          * Emergency
@@ -1628,7 +1628,7 @@ namespace Content.Shared.CCVar
         /// The minimum time for the emergency shuttle to arrive at centcomm.
         /// </summary>
         public static readonly CVarDef<float> EmergencyShuttleMinTransitTime =
-            CVarDef.Create("shuttle.emergency_transit_time_min", 90f, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.emergency_transit_time_min", 30f, CVar.SERVERONLY);
 
         /// <summary>
         /// The maximum time for the emergency shuttle to arrive at centcomm.
@@ -1640,7 +1640,7 @@ namespace Content.Shared.CCVar
         /// Whether the emergency shuttle is enabled or should the round just end.
         /// </summary>
         public static readonly CVarDef<bool> EmergencyShuttleEnabled =
-            CVarDef.Create("shuttle.emergency", true, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.emergency", false, CVar.SERVERONLY);
 
         /// <summary>
         ///     The percentage of time passed from the initial call to when the shuttle can no longer be recalled.
@@ -1653,7 +1653,7 @@ namespace Content.Shared.CCVar
         ///     Time in minutes after round start to auto-call the shuttle. Set to zero to disable.
         /// </summary>
         public static readonly CVarDef<int> EmergencyShuttleAutoCallTime =
-            CVarDef.Create("shuttle.auto_call_time", 120, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.auto_call_time", 0, CVar.SERVERONLY);
 
         /// <summary>
         ///     Time in minutes after the round was extended (by recalling the shuttle) to call
@@ -1693,7 +1693,7 @@ namespace Content.Shared.CCVar
         ///     Disabled: Cloning has full biomass cost and reclaimer can reclaim corpses with souls. (Playtested and balanced for MRP+).
         /// </summary>
         public static readonly CVarDef<bool> BiomassEasyMode =
-            CVarDef.Create("biomass.easy_mode", false, CVar.SERVERONLY);
+            CVarDef.Create("biomass.easy_mode", true, CVar.SERVERONLY);
 
         /*
          * Anomaly
@@ -1729,10 +1729,10 @@ namespace Content.Shared.CCVar
             CVarDef.Create("viewport.minimum_width", 15, CVar.REPLICATED);
 
         public static readonly CVarDef<int> ViewportMaximumWidth =
-            CVarDef.Create("viewport.maximum_width", 21, CVar.REPLICATED);
+            CVarDef.Create("viewport.maximum_width", 32, CVar.REPLICATED);
 
         public static readonly CVarDef<int> ViewportWidth =
-            CVarDef.Create("viewport.width", 21, CVar.CLIENTONLY | CVar.ARCHIVE);
+            CVarDef.Create("viewport.width", 32, CVar.CLIENTONLY | CVar.ARCHIVE);
 
         /*
          * FOV
@@ -1873,7 +1873,7 @@ namespace Content.Shared.CCVar
         /// How long a client can go without any input before being considered AFK.
         /// </summary>
         public static readonly CVarDef<float> AfkTime =
-            CVarDef.Create("afk.time", 60f, CVar.SERVERONLY);
+            CVarDef.Create("afk.time", 10f, CVar.SERVERONLY);
 
         /*
          * IC
@@ -1883,7 +1883,7 @@ namespace Content.Shared.CCVar
         /// Restricts IC character names to alphanumeric chars.
         /// </summary>
         public static readonly CVarDef<bool> RestrictedNames =
-            CVarDef.Create("ic.restricted_names", true, CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("ic.restricted_names", false, CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         /// Allows flavor text (character descriptions)
@@ -1979,7 +1979,7 @@ namespace Content.Shared.CCVar
         /// Time that players have to wait before rules can be accepted.
         /// </summary>
         public static readonly CVarDef<float> RulesWaitTime =
-            CVarDef.Create("rules.time", 60f, CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("rules.time", 120f, CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         /// Don't show rules to localhost/loopback interface.
@@ -2266,7 +2266,7 @@ namespace Content.Shared.CCVar
         ///    Whether glimmer is enabled.
         /// </summary>
         public static readonly CVarDef<bool> GlimmerEnabled =
-            CVarDef.Create("glimmer.enabled", true, CVar.REPLICATED);
+            CVarDef.Create("glimmer.enabled", false, CVar.REPLICATED);
 
         /// <summary>
         ///     Passive glimmer drain per second.
@@ -2280,7 +2280,7 @@ namespace Content.Shared.CCVar
         ///     Guaranteed psionics will still go through.
         /// </summary>
         public static readonly CVarDef<bool> PsionicRollsEnabled =
-            CVarDef.Create("psionics.rolls_enabled", true, CVar.SERVERONLY);
+            CVarDef.Create("psionics.rolls_enabled", false, CVar.SERVERONLY);
 
         /// <summary>
         ///     Whether height & width sliders adjust a character's Fixture Component
@@ -2298,7 +2298,7 @@ namespace Content.Shared.CCVar
         ///     Enables station goals
         /// </summary>
         public static readonly CVarDef<bool> StationGoalsEnabled =
-            CVarDef.Create("game.station_goals", true, CVar.SERVERONLY);
+            CVarDef.Create("game.station_goals", false, CVar.SERVERONLY);
 
         /// <summary>
         ///     Chance for a station goal to be sent
@@ -2362,7 +2362,7 @@ namespace Content.Shared.CCVar
         ///     ALL CONTESTS BELOW, regardless of type or setting will output 1f when false.
         /// </summary>
         public static readonly CVarDef<bool> DoContestsSystem =
-            CVarDef.Create("contests.do_contests_system", true, CVar.REPLICATED | CVar.SERVER);
+            CVarDef.Create("contests.do_contests_system", false, CVar.REPLICATED | CVar.SERVER);
 
         /// <summary>
         ///     Contest functions normally include an optional override to bypass the clamp set by max_percentage.
@@ -2377,7 +2377,7 @@ namespace Content.Shared.CCVar
             CVarDef.Create("contests.do_mass_contests", true, CVar.REPLICATED | CVar.SERVER);
 
         /// <summary>
-        ///     Toggles all StaminaContest functions. All stamina contests output 1f when false
+        ///     Toggles all asContest functions. All stamina contests output 1f when false
         /// </summary>
         public static readonly CVarDef<bool> DoStaminaContests =
             CVarDef.Create("contests.do_stamina_contests", true, CVar.REPLICATED | CVar.SERVER);
