@@ -81,7 +81,6 @@
     idleState: icon
     runningState: building
     staticRecipes:
-      - ShockCollar # FloofStation
       - Wirecutter
       - Igniter
       - Signaller
@@ -161,6 +160,7 @@
       - WeaponCapacitorRechargerCircuitboard
       - HandheldStationMap
       - ClothingHeadHatWelding
+      - ShockCollar # FloofStation
       - CustomDrinkJug # FloofStation
       - LeashBasic # FloofStation
       - ShortLeash # FloofStation
@@ -298,6 +298,12 @@
       - Implanter
       - PillCanister
       - ChemistryEmptyBottle01
+      - AdvancedCapacitorStockPart
+      - AdvancedMatterBinStockPart
+      - NanoManipulatorStockPart
+      - SuperCapacitorStockPart
+      - SuperMatterBinStockPart
+      - PicoManipulatorStockPart
       - AdvMopItem
       - WeaponSprayNozzle
       - ClothingBackpackWaterTank
@@ -359,6 +365,10 @@
       - AnimalTranslator
       - MofficTranslatorImplanter
       - MofficTranslator
+      - ArachnicTranslatorImplanter # Floofstation
+      - ArachnicTranslator # Floofstation
+      - RCDAmmo #DeltaV
+      - RCD #EE
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - ExplosivePayload
@@ -447,6 +457,7 @@
       - SurveillanceWirelessCameraMonitorCircuitboard
       - SurveillanceCameraWirelessRouterCircuitboard
       - ComputerTelevisionCircuitboard
+      - JukeboxCircuitBoard
       - SurveillanceWirelessCameraMovableCircuitboard
       - SurveillanceWirelessCameraAnchoredCircuitboard
       - HydroponicsTrayMachineCircuitboard
@@ -629,8 +640,6 @@
     - HamtrRLeg
     - VimHarness
   # Begin Nyano additions
-    - ClothingOuterHardsuitJuggernautReverseEngineered
-    - ClothingOuterHardsuitSyndieReverseEngineered
     - JetpackBlue
     - JetpackMini
   # End Nyano additions
@@ -1467,6 +1476,7 @@
       - SingularityToy
       - TeslaToy
       - ToySword
+      - BwoinkHammer
       - ThronglerToy
   - type: MaterialStorage
     whitelist:

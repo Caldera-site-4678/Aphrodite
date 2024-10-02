@@ -31,6 +31,10 @@
   - type: Actions
   - type: Psionic
     removable: false
+    psychognomicDescriptors:
+      - p-descriptor-old
+      - p-descriptor-demiurgic
+      - p-descriptor-mysterious
   - type: InnatePsionicPowers
     powersToAdd:
       - XenoglossyPower
@@ -44,3 +48,10 @@
   - type: GuideHelp
     guides:
     - Psionics
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    understands:
+    - TauCetiBasic

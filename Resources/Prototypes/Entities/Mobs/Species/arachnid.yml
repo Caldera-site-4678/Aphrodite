@@ -66,6 +66,13 @@
   - type: Speech
     speechVerb: Arachnid
     speechSounds: Arachnid
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - Arachnic
+    understands:
+    - TauCetiBasic
+    - Arachnic
   - type: Vocal
     sounds:
       Male: UnisexArachnid
